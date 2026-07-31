@@ -1,0 +1,7 @@
+interface:
+  display_name: "项目排期自动生成"
+  short_description: "从服务建议书生成并严格校验标准化项目甘特排期工作簿"
+  default_prompt: "Use $generate-project-schedule to generate and validate a project Gantt schedule from this service proposal."
+
+policy:
+  allow_implicit_invocation: true
