@@ -17,7 +17,8 @@ description: Generate and validate Chinese project Gantt schedule workbooks from
    ```
 
 5. 检查输出中的 `validation.errors`。存在错误时停止生成 Excel，先修正输入。
-6. 使用 `assets/project-schedule-template.xlsx` 生成最终工作簿，保留模板的冻结窗格、颜色、列宽和图例。
+6. 将 `assets/project-schedule-template.xlsx` 作为唯一权威版式生成最终工作簿，保留模板的冻结窗格、颜色、列宽、行高、合并关系和图例。
+   模板中的项目名称、日期、阶段内容和工期合计仅为示例，必须用当前项目的计算结果全部覆盖，不得沿用示例数值。
 7. 检查甘特图中每个板块的不同正式工作日期数量，必须等于该板块 `totalWorkdays`。
 8. 检查提案日是否为板块正式工作结束后的下一个有效工作日，且未计入正式工期。
 9. 渲染并检查全部工作表后再交付。
@@ -32,6 +33,7 @@ description: Generate and validate Chinese project Gantt schedule workbooks from
 - 默认同时进行的细项不超过 2 项，除非输入明确允许。
 - 黄色跟进默认 5 个工作日，仅为估算，不计入正式工期。
 - 输出前必须报告正式工作日合计、提案日数量和各板块日期范围。
+- 工期合计行必须由各板块 `totalWorkdays` 求和生成，并与输出报告中的正式工作日合计一致。
 
 ## 资源
 
